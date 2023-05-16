@@ -29,9 +29,9 @@ Durante estas cuatro semanas, vamos a trabajar en una aplicación que encripta t
 
 Tenemos un periodo de tiempo de cuatro semanas para desarrollar el proyecto y vamos a trabajar con el sistema ágil de desarrollo, utilizando el Trello de la siguiente forma:
 
-    La columna Listos para iniciar presenta las tarjetas con elementos que aun no fueron desarrollados.
-    En la columna En Desarrollo estarán los elementos que estés desarrollando en el momento.Al iniciar una tarea, podrás mover la tarjeta que contiene dicha tarea para esta columna.
-    En la columna Pausado estarán los elementos que comenzaste a desarrollar, pero necesitaste parar por algún motivo.
-    Por fin, en la columna Concluido estarán los elementos ya concluidos.
+- La columna Listos para iniciar presenta las tarjetas con elementos que aun no fueron desarrollados.
+- En la columna En Desarrollo estarán los elementos que estés desarrollando en el momento.Al iniciar una tarea, podrás mover la tarjeta que contiene dicha tarea para esta columna.
+- En la columna Pausado estarán los elementos que comenzaste a desarrollar, pero necesitaste parar por algún motivo.
+- Por fin, en la columna Concluido estarán los elementos ya concluidos.
 
 El Trello es una herramienta de uso individual para que puedas controlar el progreso de tus actividades, pero no será evaluada.
