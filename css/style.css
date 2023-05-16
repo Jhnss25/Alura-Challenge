@@ -1,0 +1,81 @@
+:root {
+	--gris: #E5E5E5;
+	--lightBlue: #F3F5FC;
+	--darkBlue: #0A3871;
+	--gray: #495057;
+	--white: #FFFFFF;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+body {
+	background-color: var(--gris);
+	font-size: 16px;
+	line-height: 2;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* Globales */
+.contenedor {
+	max-width: 100rem;
+	margin: 0 auto;
+}
+
+.contenido-principal {
+	display: flex;
+	padding: 4rem;
+}
+
+.encriptar {
+	flex: 1;
+}
+.encriptar img {
+	width: 2.5rem;
+}
+
+.ingresar-texto {
+	padding: 0 5rem;
+}
+.ingresar-texto textarea {
+	height: 50rem;
+	width: 100%;
+	border: none;
+}
+.ingresar-texto p {
+	margin: 3rem 0 0 2rem;
+	font-size: 1rem;
+
+}
+.ingresar-texto img {
+	width: 1rem;
+}
+
+.guardar-encriptacion {
+	flex: 1;
+}
+
+/* botones */
+.alinear-parrafo {
+	display: inline-block; 
+	margin: 0 auto; 
+}
+.botones {
+	display: flex;
+	justify-content: center;
+	margin: 0 2rem 2rem;
+	gap: 2rem;
+}
+.btn {
+	background-color: #0a3871;
+	color: #ffffff;
+	padding: 1rem 6rem;
+	border: none;
+	border-radius: 1rem;
+	cursor: pointer;
+}
