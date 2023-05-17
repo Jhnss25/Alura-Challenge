@@ -12,20 +12,23 @@
 		<div class="encriptar">
 			<img src="img/logo.png" alt="imagen logo">
 
-			<div class="ingresar-texto"> 				
+			<form class="form">
 				<textarea placeholder="Ingrese texto aquí"></textarea>
 			
-				<div class="alinear-parrafo">
-					<p> <img src="./img/exclamation_circle.png" alt="exclamation circle"> Solo letras minúsculas y sin acentos</p>
+				<fieldset class="form-botones">
+					<legend> <img src="./img/exclamation_circle.png" alt="exclamation circle"> Solo letras minúsculas y sin acentos</legend>
 					
 					<div class="botones">
 						<button class="btn">Encriptar</button>
 						<button class="btn">Desencriptar</button>
 					</div>
-				</div>
-			</div>
+				</fieldset>
+			</form>
 		</div>
-		<div class="guardar-encriptacion"></div>
+		<div class="texto-encriptado">
+			<h2>Ningún mensaje fue encontrado</h2>
+			<p>Ingresa el texto que desees encriptar o desencriptar.</p>
+		</div>
 	<main>
 
 	<script src="js/app.js"></script>
