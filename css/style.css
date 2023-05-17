@@ -13,7 +13,7 @@ html {
 body {
 	background-color: var(--gris);
 	font-size: 16px;
-	line-height: 2;
+	line-height: 1.4;
 }
 *,
 *:before,
@@ -27,55 +27,81 @@ body {
 	margin: 0 auto;
 }
 
+/* Escribir frase a encriptar */
 .contenido-principal {
-	display: flex;
-	padding: 4rem;
+	/* display: flex; */
+	/* padding: 4rem; */
 }
 
 .encriptar {
-	flex: 1;
+	width: 95%;
+	margin: 0 auto;
 }
 .encriptar img {
 	width: 2.5rem;
+	margin: 1rem;
 }
 
-.ingresar-texto {
-	padding: 0 5rem;
+/* Bótones */
+.form {
+	/* padding: 0 5rem; */
 }
-.ingresar-texto textarea {
-	height: 50rem;
+.form textarea {
+	background-color: #e5e5e5;
+	height: 30rem;
 	width: 100%;
 	border: none;
+	color:#0A3871;
+	font-size: 3rem;
+	font-weight: bold;
 }
-.ingresar-texto p {
-	margin: 3rem 0 0 2rem;
+.form textarea:focus{
+	font-size: 2rem;
+	font-weight: 400;
+}
+.form fieldset {
+	border: none;
+}
+.form-botones legend {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 3rem 0 0 0;
 	font-size: 1rem;
 
 }
-.ingresar-texto img {
+.form-botones img {
 	width: 1rem;
 }
 
-.guardar-encriptacion {
-	flex: 1;
-}
-
-/* botones */
-.alinear-parrafo {
-	display: inline-block; 
-	margin: 0 auto; 
-}
 .botones {
 	display: flex;
-	justify-content: center;
-	margin: 0 2rem 2rem;
-	gap: 2rem;
+	flex-direction: column;
+	gap: 1rem;
 }
 .btn {
 	background-color: #0a3871;
 	color: #ffffff;
-	padding: 1rem 6rem;
+	padding: 1rem;
 	border: none;
 	border-radius: 1rem;
 	cursor: pointer;
+}
+
+/* Donde se guarda la frase encriptada */
+
+.texto-encriptado {
+	background-color: #ffffff;
+	text-align: center;
+	border-radius: 2rem;
+	padding: 2rem 1rem;
+	width: 90%;
+	margin: 0 auto 2rem;
+}
+.texto-encriptado h2 {
+	font-size: 2.5rem;
+	margin: 0;
+}
+.texto-encriptado p {
+	margin: 1rem 0 0;
 }
