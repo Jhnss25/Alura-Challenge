@@ -146,6 +146,9 @@ img {
 /* Donde se guarda la frase encriptada */
 
 .texto-encriptado {
+	display: flex;
+	flex-direction: column;
+	justify-content:  center;
 	background-color: #ffffff;
 	text-align: center;
 	border-radius: 2rem;
@@ -153,6 +156,15 @@ img {
 	width: 90%;
 	margin: 0 auto 2rem;
 	height: 100%;
+}
+.invisible {
+	display: none;
+}
+@media (min-width: 768px) {
+	.invisible {
+		display: inline-block;
+		margin-bottom: 3rem;
+	}
 }
 .texto-encriptado h2 {
 	font-size: 2.5rem;
