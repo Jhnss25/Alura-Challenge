@@ -12,14 +12,16 @@
 		<div class="encriptar">
 			<img class="logo" src="img/logo.png" alt="imagen logo">
 			<form class="form">
-				<textarea placeholder="Ingrese texto aquí"></textarea>
+				<div id="contenedor-error">
+					<textarea placeholder="Ingrese texto aquí"></textarea>
+				</div>
 			
 				<fieldset class="form-botones">
 					<legend> <img src="./img/exclamation_circle.png" alt="exclamation circle"> Solo letras minúsculas y sin acentos</legend>
 					
 					<div class="botones">
-						<button class="btn btn--active">Encriptar</button>
-						<button class="btn">Desencriptar</button>
+						<button class="btn btn--active" type="submit">Encriptar</button>
+						<button class="btn" type="submit">Desencriptar</button>
 					</div>
 				</fieldset>
 			</form>
