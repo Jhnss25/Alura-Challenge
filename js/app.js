@@ -1,3 +1,5 @@
+const guardarEncriptacion = document.querySelector('.guardar-encriptacion');
+
 
 
 function encriptador(texto) {
