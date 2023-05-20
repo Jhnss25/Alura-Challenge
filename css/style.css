@@ -181,3 +181,8 @@ img {
 .texto-encriptado p {
 	margin: 1rem 0 0;
 }
+.parrafo-mensaje {
+	font-size: 2rem;
+	padding: 1rem;
+	border-bottom: 1px solid #000;
+}

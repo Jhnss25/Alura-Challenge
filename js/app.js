@@ -4,6 +4,7 @@ const ingresarTexto = document.querySelector('.form textarea');
 const botones = document.querySelector('.botones');
 const guardarEncriptacion = document.querySelector('.guardar-encriptacion');
 const contenedorError = document.querySelector('#contenedor-error');
+const textoEncriptado = document.querySelector('.texto-encriptado');
 
 // Eventos
 botones.addEventListener('click', encriptarDesencriptar);
@@ -15,13 +16,15 @@ function encriptarDesencriptar(e) {
     if (ingresarTexto.value === '') return validarTextarea(`Ingrese una frase a ${e.target.id}`);
     if (!/^[a-zA-Z0-9@.,"'!¡¿? ]+$/g.test(ingresarTexto.value)) return validarTextarea(`No se permite caracteres especiales`);
 
-    if (e.target.id === 'encriptar') {
-
-        console.log(e.target.id)
-    } else {
-        
-    }
+    limpiarHTML();
     
+    if (e.target.id === 'encriptar') {
+        crearParrafoHTML(encriptador(ingresarTexto.value));        
+    } else {
+        crearParrafoHTML(desencriptar(ingresarTexto.value));
+    }
+
+    formulario.reset();
 }
 
 // Valida cuando no ingresan texto al textarea, manda un mensaje de error
@@ -42,6 +45,14 @@ function validarTextarea(error) {
     }
 }
 
+function crearParrafoHTML(mensaje) {
+    const parrafoMensaje = document.createElement('p');
+    parrafoMensaje.textContent = mensaje;
+    parrafoMensaje.classList.add('parrafo-mensaje');
+
+    textoEncriptado.appendChild(parrafoMensaje);
+}
+
 // limpia el el parrafo error
 function limpiarError() {
     if (contenedorError.firstChild) {
@@ -49,19 +60,14 @@ function limpiarError() {
     }
 }
 
+// Limpiar el html
+function limpiarHTML() {
+    const borrar = document.querySelector('.borrar-div');
 
+    if (borrar !== null) borrar.remove();
+}
 
-
-
-
-
-
-
-
-
-
-
-
+// Encripta el texto ingresado en el textarea
 function encriptador(texto) {
     texto = texto.toLowerCase().split("");
 
@@ -84,15 +90,11 @@ function encriptador(texto) {
                 break;
         }
     }
-    
 
     return texto.join("");
 }
 
-// console.log(encriptador('Esto es un encriptador, hola como estas'));
-// console.log(encriptador('aeiouuoiea'));
-console.log(encriptador('¡ay!, hay una playa ahi'));
-
+// Desencripta el mensaje dado
 function desencriptar(encriptado) {
     let descriptado = encriptado.toLowerCase()
         .replace(/ai/g, 'a')
@@ -103,7 +105,3 @@ function desencriptar(encriptado) {
 
     return descriptado;
 }
-
-// console.log(desencriptar(encriptador('Esto es un encriptador, hola como estas')));
-// console.log(desencriptar(encriptador('aeiouuoiea')));
-// console.log(desencriptar(encriptador('ai')));
