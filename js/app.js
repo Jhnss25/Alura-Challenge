@@ -115,9 +115,9 @@ function desencriptar(encriptado) {
     return descriptado;
 }
 
-// Copia el parrafo al encriptar o desencriptar
+// Copia el parrafo al encriptar o desencriptar al dar click al botón copiar
 function copiarResultado(e) {
-    console.log('copiar....');
+    const parrafoMensaje = document.querySelector('.parrafo-mensaje').textContent;
 
+    navigator.clipboard.writeText(parrafoMensaje);
 }
-

@@ -1,30 +1,19 @@
-:root {
-	--gris: #E5E5E5;
-	--lightBlue: #F3F5FC;
-	--darkBlue: #0A3871;
-	--gray: #495057;
-	--white: #FFFFFF;
-}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&display=swap');
 
 html {
 	box-sizing: border-box;
 	font-size: 62.5%;
 }
 body {
-	background-color: var(--gris);
+	background-color: #E5E5E5;
 	font-size: 16px;
+	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.4;
 }
 *,
 *:before,
 *:after {
 	box-sizing: inherit;
-}
-
-/* Globales */
-.contenedor {
-	/* max-width: 120rem; */
-	/* margin: 0 auto; */
 }
 img {
 	max-width: 100%;
@@ -63,7 +52,6 @@ img {
 	}
 }
 
-
 /* Formulario y Bótones */
 @media (min-width: 768px) {
 	.form {
@@ -81,8 +69,8 @@ img {
 	width: 100%;
 	border: none;
 	color:#0A3871;
-	font-size: 3rem;
-	font-weight: bold;
+	font-size: 2.7rem;
+	font-weight: 400;
 }
 @media (min-width: 480px) {
 	.form textarea {
@@ -93,10 +81,6 @@ img {
 	.form textarea {
 		height: 50rem;
 	}
-}
-.form textarea:focus{
-	font-size: 2rem;
-	font-weight: 400;
 }
 .form fieldset {
 	border: none;
@@ -159,7 +143,6 @@ img {
 }
 
 /* Donde se guarda la frase encriptada */
-
 .texto-encriptado {
 	display: flex;
 	flex-direction: column;
@@ -189,6 +172,7 @@ img {
 .texto-encriptado h2 {
 	font-size: 2.5rem;
 	margin: 0;
+	font-style: italic;
 }
 .texto-encriptado p {
 	margin: 1rem 0 0;
