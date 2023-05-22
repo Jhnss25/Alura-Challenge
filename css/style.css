@@ -145,10 +145,17 @@ img {
 	font-size: 2rem;
 	text-transform: uppercase;
 }
-
 .btn--active {
 	background-color: #0a3871;
 	color: #ffffff;
+}
+
+.btn-unset {
+	display: none;
+}
+.btn-copiar {
+	display: inline-block;
+	margin: 2rem 0 1rem;
 }
 
 /* Donde se guarda la frase encriptada */
@@ -164,6 +171,11 @@ img {
 	width: 90%;
 	margin: 0 auto 2rem;
 	height: 100%;
+}
+.texto-encriptado--start {
+	justify-content: space-between;
+	text-align: start;
+	padding: 1rem;
 }
 .invisible {
 	display: none;
@@ -184,5 +196,4 @@ img {
 .parrafo-mensaje {
 	font-size: 2rem;
 	padding: 1rem;
-	border-bottom: 1px solid #000;
 }

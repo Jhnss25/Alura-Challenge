@@ -5,9 +5,11 @@ const botones = document.querySelector('.botones');
 const guardarEncriptacion = document.querySelector('.guardar-encriptacion');
 const contenedorError = document.querySelector('#contenedor-error');
 const textoEncriptado = document.querySelector('.texto-encriptado');
+const btnCopiar = document.querySelector('.btn-unset');
 
 // Eventos
 botones.addEventListener('click', encriptarDesencriptar);
+btnCopiar.addEventListener('click', copiarResultado);
 
 // Funciones
 function encriptarDesencriptar(e) {
@@ -16,10 +18,10 @@ function encriptarDesencriptar(e) {
     if (ingresarTexto.value === '') return validarTextarea(`Ingrese una frase a ${e.target.id}`);
     if (!/^[a-zA-Z0-9@.,"'!¡¿? ]+$/g.test(ingresarTexto.value)) return validarTextarea(`No se permite caracteres especiales`);
 
-    limpiarHTML();
+    limpiarHTML(textoEncriptado);
     
     if (e.target.id === 'encriptar') {
-        crearParrafoHTML(encriptador(ingresarTexto.value));        
+        crearParrafoHTML(encriptador(ingresarTexto.value));
     } else {
         crearParrafoHTML(desencriptar(ingresarTexto.value));
     }
@@ -47,10 +49,16 @@ function validarTextarea(error) {
 
 function crearParrafoHTML(mensaje) {
     const parrafoMensaje = document.createElement('p');
+
     parrafoMensaje.textContent = mensaje;
     parrafoMensaje.classList.add('parrafo-mensaje');
+    textoEncriptado.classList.add('texto-encriptado--start');
+
+
+    btnCopiar.classList.add('btn-copiar');
 
     textoEncriptado.appendChild(parrafoMensaje);
+    textoEncriptado.appendChild(btnCopiar);
 }
 
 // limpia el el parrafo error
@@ -61,10 +69,11 @@ function limpiarError() {
 }
 
 // Limpiar el html
-function limpiarHTML() {
-    const borrar = document.querySelector('.borrar-div');
-
-    if (borrar !== null) borrar.remove();
+// Recibe como argumento el contenedor padre de lo que queramos eliminar
+function limpiarHTML(eliminar) {
+    while (eliminar.firstChild) {
+        eliminar.removeChild(eliminar.firstChild);
+    }
 }
 
 // Encripta el texto ingresado en el textarea
@@ -105,3 +114,10 @@ function desencriptar(encriptado) {
 
     return descriptado;
 }
+
+// Copia el parrafo al encriptar o desencriptar
+function copiarResultado(e) {
+    console.log('copiar....');
+
+}
+
